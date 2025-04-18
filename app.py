@@ -107,7 +107,7 @@ fig3 = px.line(grouped, x="month", y="CO", color="station", markers=True,
                title='Average CO2 (Carbon Dioxide)').update_layout(xaxis_title="Month", yaxis_title="CO (μg/m³)")
 
 fig4 = px.bar(grouped, x='month', y='O3', color="station",
-              title='Average O3 Concentration').update_layout(xaxis_title="Month", yaxis_title="O3 (μg/m³)")
+              title='Average TEMP Concentration').update_layout(xaxis_title="Month", yaxis_title="O3 (μg/m³)")
 
 left_column, right_column = st.columns(2)
 left_column.plotly_chart(fig3, use_container_width=True)
@@ -115,7 +115,7 @@ right_column.plotly_chart(fig4, use_container_width=True)
 
 st.write("""
     <div style='text-align:center;'>
-        <h5>The higher values of PM2.5, PM10, CO, and O3, the worse air quality.</h5>
+        <h5>The higher values of PM2.5, PM10, CO2, and TEMP, the worse air quality.</h5>
     </div>
     """, unsafe_allow_html=True)
 
